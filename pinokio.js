@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "3.2",
   title: "YuE",
-  description: "",
+  description: "Open Full-song Generation Foundation Model (LowVRAM via https://github.com/deepbeepmeep/YuEGP)",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
@@ -57,10 +57,26 @@ module.exports = {
         }]
       } else {
         return [{
-          default: true,
           icon: "fa-solid fa-power-off",
-          text: "Start",
+          text: "16G VRAM (Full)",
           href: "start.js",
+          params: {
+            profile: 1
+          }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "12G VRAM (Quantized)",
+          href: "start.js",
+          params: {
+            profile: 3
+          }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "10G VRAM (Quantized)",
+          href: "start.js",
+          params: {
+            profile: 4
+          }
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",
