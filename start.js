@@ -4,11 +4,11 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        venv: "env",                // Edit this to customize the venv folder path
+        venv: "../env",                // Edit this to customize the venv folder path
         env: { },                   // Edit this to customize environment variables (see documentation)
-        path: "app",                // Edit this to customize the path to start the shell from
+        path: "app/inference",                // Edit this to customize the path to start the shell from
         message: [
-          "python gradio_app.py --profile {{args.profile}} --compile",    // Edit with your custom commands
+          "python gradio_server.py --profile {{args.profile}} --compile",    // Edit with your custom commands
         ],
         on: [{
           // The regular expression pattern to monitor.
