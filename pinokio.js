@@ -32,6 +32,11 @@ module.exports = {
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
             href: "start.js",
+          }, {
+            icon: "fa-regular fa-folder-open",
+            text: "Output Files",
+            href: "app/inference/output",
+            fs: true
           }]
         } else {
           return [{
@@ -77,6 +82,11 @@ module.exports = {
           params: {
             profile: 4
           }
+        }, {
+          icon: "fa-regular fa-folder-open",
+          text: "Output Files",
+          href: "app/inference/output",
+          fs: true
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",
