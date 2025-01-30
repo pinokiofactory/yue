@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "3.4",
+  version: "3.5",
   title: "YuE",
   description: "[NVIDIA ONLY] Open Full-song Generation Foundation Model (LowVRAM via https://github.com/deepbeepmeep/YuEGP)",
   icon: "icon.png",
