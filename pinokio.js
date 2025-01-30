@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
-  version: "3.2",
+  version: "3.4",
   title: "YuE",
-  description: "Open Full-song Generation Foundation Model (LowVRAM via https://github.com/deepbeepmeep/YuEGP)",
+  description: "[NVIDIA ONLY] Open Full-song Generation Foundation Model (LowVRAM via https://github.com/deepbeepmeep/YuEGP)",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
