@@ -69,21 +69,24 @@ module.exports = {
             text: "16g vram (full)",
             href: "start.js",
             params: {
-              profile: 1
+              profile: 1,
+              mode: ""
             }
           }, {
             icon: "fa-solid fa-power-off",
             text: "12g vram (quantized)",
             href: "start.js",
             params: {
-              profile: 3
+              profile: 3,
+              mode: ""
             }
           }, {
             icon: "fa-solid fa-power-off",
             text: "10g vram (quantized)",
             href: "start.js",
             params: {
-              profile: 4
+              profile: 4,
+              mode: ""
             }
           }]
         }, {
@@ -95,7 +98,7 @@ module.exports = {
             href: "start.js",
             params: {
               profile: 1,
-              mode: "audio"
+              mode: "--icl"
             }
           }, {
             icon: "fa-solid fa-power-off",
@@ -103,7 +106,7 @@ module.exports = {
             href: "start.js",
             params: {
               profile: 3,
-              mode: "audio"
+              mode: "--icl"
             }
           }, {
             icon: "fa-solid fa-power-off",
@@ -111,7 +114,7 @@ module.exports = {
             href: "start.js",
             params: {
               profile: 4,
-              mode: "audio"
+              mode: "--icl"
             }
           }]
         }, {
