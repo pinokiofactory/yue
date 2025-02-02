@@ -9,7 +9,7 @@ module.exports = async (kernel) => {
           venv: "../env",                // Edit this to customize the venv folder path
           path: "app/inference",                // Edit this to customize the path to start the shell from
           message: [
-            "python gradio_server.py --{{args.mode || ''}} --profile {{args.profile}} {{args.compile ? '--compile' : ''}} --port " + port,    // Edit with your custom commands
+            "python gradio_server.py {{args.mode ? '--'+args.mode || ''}} --profile {{args.profile}} {{args.compile ? '--compile' : ''}} --port " + port,    // Edit with your custom commands
           ],
           on: [{
             // The regular expression pattern to monitor.
