@@ -63,24 +63,48 @@ module.exports = {
       } else {
         return [{
           icon: "fa-solid fa-power-off",
-          text: "16G VRAM (Full)",
+          text: "16G VRAM Generate",
           href: "start.js",
           params: {
             profile: 1
           }
         }, {
           icon: "fa-solid fa-power-off",
-          text: "12G VRAM (Quantized)",
+          text: "16G VRAM Reference",
+          href: "start.js",
+          params: {
+            profile: 1,
+            icl: true
+          }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "12G VRAM Generate",
           href: "start.js",
           params: {
             profile: 3
           }
         }, {
           icon: "fa-solid fa-power-off",
-          text: "10G VRAM (Quantized)",
+          text: "12G VRAM Reference",
+          href: "start.js",
+          params: {
+            profile: 3,
+            icl : true
+          }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "10G VRAM Generate",
           href: "start.js",
           params: {
             profile: 4
+          }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "10G VRAM Reference",
+          href: "start.js",
+          params: {
+            profile: 4,
+            icl: true
           }
         }, {
           icon: "fa-regular fa-folder-open",

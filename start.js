@@ -10,7 +10,7 @@ module.exports = {
         },                   // Edit this to customize environment variables (see documentation)
         path: "app/inference",                // Edit this to customize the path to start the shell from
         message: [
-          "python gradio_server.py --profile {{args.profile}} {{args.compile ? '--compile' : ''}}",    // Edit with your custom commands
+          "python gradio_server.py --profile {{args.profile}} {{args.icl ? '--icl' : ''}} {{args.compile ? '--compile' : ''}}",    // Edit with your custom commands
         ],
         on: [{
           // The regular expression pattern to monitor.
