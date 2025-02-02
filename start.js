@@ -8,7 +8,7 @@ module.exports = async (kernel) => {
         params: {
           env: {
             SERVER_PORT: port
-          }
+          },
           venv: "../env",                // Edit this to customize the venv folder path
           path: "app/inference",                // Edit this to customize the path to start the shell from
           message: [
