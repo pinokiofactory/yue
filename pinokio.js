@@ -62,42 +62,74 @@ module.exports = {
         }]
       } else {
         return [{
-          icon: "fa-solid fa-power-off",
-          text: "16G VRAM (Full)",
-          href: "start.js",
-          params: {
-            profile: 1
-          }
+          icon: "fa-solid fa-pencil",
+          text: "Start Normal Mode",
+          menu: [{
+            icon: "fa-solid fa-power-off",
+            text: "16g vram (full)",
+            href: "start.js",
+            params: {
+              profile: 1
+            }
+          }, {
+            icon: "fa-solid fa-power-off",
+            text: "12g vram (quantized)",
+            href: "start.js",
+            params: {
+              profile: 3
+            }
+          }, {
+            icon: "fa-solid fa-power-off",
+            text: "10g vram (quantized)",
+            href: "start.js",
+            params: {
+              profile: 4
+            }
+          }]
         }, {
-          icon: "fa-solid fa-power-off",
-          text: "12G VRAM (Quantized)",
-          href: "start.js",
-          params: {
-            profile: 3
-          }
-        }, {
-          icon: "fa-solid fa-power-off",
-          text: "10G VRAM (Quantized)",
-          href: "start.js",
-          params: {
-            profile: 4
-          }
+          icon: "fa-solid fa-microphone",
+          text: "Start Audio Input Mode",
+          menu: [{
+            icon: "fa-solid fa-power-off",
+            text: "16g vram (full)",
+            href: "start.js",
+            params: {
+              profile: 1,
+              mode: "audio"
+            }
+          }, {
+            icon: "fa-solid fa-power-off",
+            text: "12g vram (quantized)",
+            href: "start.js",
+            params: {
+              profile: 3,
+              mode: "audio"
+            }
+          }, {
+            icon: "fa-solid fa-power-off",
+            text: "10g vram (quantized)",
+            href: "start.js",
+            params: {
+              profile: 4,
+              mode: "audio"
+            }
+          }]
         }, {
           icon: "fa-regular fa-folder-open",
-          text: "Output Files",
+          text: "output files",
           href: "app/inference/output",
           fs: true
         }, {
           icon: "fa-solid fa-plug",
-          text: "Update",
+          text: "update",
           href: "update.js",
         }, {
           icon: "fa-solid fa-plug",
-          text: "Install",
+          text: "install",
           href: "install.js",
         }, {
           icon: "fa-regular fa-circle-xmark",
-          text: "Reset",
+          text: "reset",
           href: "reset.js",
         }]
       }
@@ -105,7 +137,7 @@ module.exports = {
       return [{
         default: true,
         icon: "fa-solid fa-plug",
-        text: "Install",
+        text: "install",
         href: "install.js",
       }]
     }
