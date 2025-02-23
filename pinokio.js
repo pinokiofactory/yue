@@ -85,6 +85,13 @@ module.exports = {
             params: {
               profile: 4,
             }
+          }, {
+            icon: "fa-solid fa-power-off",
+            text: "8g vram (quantized)",
+            href: "start.js",
+            params: {
+              profile: 5,
+            }
           }]
         }, {
           icon: "fa-solid fa-microphone",
@@ -111,6 +118,14 @@ module.exports = {
             href: "start.js",
             params: {
               profile: 4,
+              icl: true
+            }
+          }, {
+            icon: "fa-solid fa-power-off",
+            text: "8g vram (quantized)",
+            href: "start.js",
+            params: {
+              profile: 5,
               icl: true
             }
           }]
