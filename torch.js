@@ -8,7 +8,7 @@ module.exports = {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
-          "uv pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128"
+          "uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128"
         ]
       },
       "next": null
@@ -76,7 +76,7 @@ module.exports = {
         "venv_python": "{{args && args.venv_python ? args.venv_python : null}}",
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
-        "message": "uv pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/rocm6.0"
+        "message": "uv pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/rocm6.2"
       }
     },
     // linux cpu
