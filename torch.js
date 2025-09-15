@@ -74,9 +74,8 @@ module.exports = {
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
           "uv pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu128 --force-reinstall --no-deps",
-          "uv pip install ninja",
-          "uv pip install flash-attn --no-build-isolation",
-          "uv pip install triton"
+          "uv pip install ninja triton wheel",
+          "uv pip install flash-attn --no-build-isolation"
         ]
       },
       "next": null
@@ -91,9 +90,8 @@ module.exports = {
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
           "uv pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu121 --force-reinstall --no-deps",
-          "uv pip install ninja",
-          "uv pip install flash-attn --no-build-isolation",
-          "uv pip install triton"
+          "uv pip install ninja triton wheel",
+          "uv pip install flash-attn --no-build-isolation"
         ]
       }
     },
