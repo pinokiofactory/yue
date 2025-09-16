@@ -74,8 +74,9 @@ module.exports = {
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
           "uv pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu128 --force-reinstall --no-deps",
-          "uv pip install ninja triton wheel",
-          "uv pip install flash-attn --no-build-isolation"
+          "uv pip install ninja wheel",
+          "uv pip install triton",
+          "uv pip install https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.11/flash_attn-2.8.3+cu128torch2.7-cp311-cp311-linux_x86_64.whl"
         ]
       },
       "next": null
@@ -89,9 +90,10 @@ module.exports = {
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
-          "uv pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu121 --force-reinstall --no-deps",
-          "uv pip install ninja triton wheel",
-          "uv pip install flash-attn --no-build-isolation"
+          "uv pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu124 --force-reinstall --no-deps",
+          "uv pip install ninja wheel",
+          "uv pip install triton",
+          "uv pip install https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.11/flash_attn-2.8.3+cu124torch2.5-cp311-cp311-linux_x86_64.whl"
         ]
       }
     },
