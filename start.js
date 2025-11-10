@@ -6,32 +6,23 @@ module.exports = async (kernel) => {
       {
         method: "shell.run",
         params: {
-          venv: "../env",                // Edit this to customize the venv folder path
+          venv: "../env",
           env: { 
             SERVER_PORT: port
-          },                   // Edit this to customize environment variables (see documentation)
-          path: "app/inference",                // Edit this to customize the path to start the shell from
+          },
+          path: "app/inference",
           message: [
-            "python gradio_server.py --profile {{args.profile}} {{args.icl ? '--icl' : ''}} {{args.compile ? '--compile' : ''}}",    // Edit with your custom commands
+            "python gradio_server.py --profile {{args.profile}} {{args.icl ? '--icl' : ''}} {{args.compile ? '--compile' : ''}}",
           ],
           on: [{
-            // The regular expression pattern to monitor.
-            // When this pattern occurs in the shell terminal, the shell will return,
-            // and the script will go onto the next step.
-            "event": "/http:\/\/\\S+/",   
-
-            // "done": true will move to the next step while keeping the shell alive.
-            // "kill": true will move to the next step after killing the shell.
+            "event": "/http:\/\/\\S+/",
             "done": true
           }]
         }
       },
       {
-        // This step sets the local variable 'url'.
-        // This local variable will be used in pinokio.js to display the "Open WebUI" tab when the value is set.
         method: "local.set",
         params: {
-          // the input.event is the regular expression match object from the previous step
           url: "{{input.event[0]}}"
         }
       }
