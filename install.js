@@ -38,7 +38,7 @@ module.exports = {
         path: "app",
         message: [
           "uv pip install -r requirements.txt",
-          "uv pip install gradio hf-xet"
+          "uv pip install hf-xet"
         ]
       }
     },
@@ -50,6 +50,12 @@ module.exports = {
         message: [
           "uv pip install git+https://github.com/cocktailpeanut/transformers"
         ]
+      }
+    },
+    {
+      method: "notify",
+      params: {
+        html: "Installation successful! Click the 'start' tab to get started."
       }
     }
   ]
