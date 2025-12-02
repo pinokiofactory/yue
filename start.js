@@ -1,6 +1,9 @@
 module.exports = async (kernel) => {
   const port = await kernel.port()
   return {
+    requires: {
+      bundle: "ai",
+    },
     daemon: true,
     run: [
       {
